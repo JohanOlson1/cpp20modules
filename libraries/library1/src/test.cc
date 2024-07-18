@@ -1,5 +1,7 @@
-#include "test.h"
+module;
 
-int DummyFunction(int x, int y) {
+export module Test;
+
+export int DummyFunction(int x, int y) {
 	return x + y;
 }

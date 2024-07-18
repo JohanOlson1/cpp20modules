@@ -1,15 +1,16 @@
 cmake_minimum_required(VERSION 3.20.2)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set( CMAKE_CXX_COMPILER "/usr/bin/g++" )
+
 project(
 	cpp20modules
 	VERSION 1.0.0
 	LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-add_compile_options(-O3 -m64 -Wall -Wextra -Wpedantic -Wshadow -double-promotion -flto -funroll-loops)
+add_compile_options(-O3 -m64 -Wall -Wextra -Wpedantic -Wshadow -double-promotion -flto -funroll-loops -fmodules-ts)
 
 find_package(IPP REQUIRED)
 
